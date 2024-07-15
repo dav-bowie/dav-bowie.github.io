@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,72 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
+    <style>
+        /* Add your custom styles here */
+        .navbar {
+            position: relative;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ff6347;
+        }
+
+        /* Collapsible menu styles */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .hero-content {
+                padding-top: 4rem;
+                /* Adjust as needed */
+            }
+        }
+
+        .container {
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +85,12 @@
     </header>
 
     <nav class="navbar">
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="menu">
             <li><a href="#about">About</a></li>
             <li><a href="#github">GitHub</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -31,22 +103,29 @@
         <section id="about" class="container">
             <h2>About Me</h2>
             <p>Hello! I'm David Bui, a student at UC Berkeley pursuing a degree in Mechanical Engineering, Data Science,
-                and Project Management Consulting. I have a passion for technology, project management, and innovative design. My goal is
-                to leverage my skills and experiences to make a positive impact in the engineering and business fields.</p>
+                and Project Management Consulting. I have a passion for technology, project management, and innovative
+                design. My goal is
+                to leverage my skills and experiences to make a positive impact in the engineering and business fields.
+            </p>
             <img src="P1190686.JPG" alt="David Bui" class="profile-photo">
         </section>
 
         <section id="github" class="container">
             <h2>GitHub</h2>
             <div class="github-card">
-                <a href="https://github.com/your-github-profile" target="_blank">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-logo">
+                <a href="https://github.com/dav-bowie" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+                        class="github-logo">
                 </a>
                 <div class="github-content">
                     <p>Check out my GitHub!</p>
                     <div class="github-description">
                         <h3>Check out my projects!</h3>
-                        <p>My passion for optimizing today's world with new solutions in the tech industry began with creating my own crime prediction analysis project. This experience allowed me to expand my knowledge in machine learning, data analysis, and solving diverse problems in computer science. I am driven by the potential to create impactful solutions and continuously seek to learn and grow in the tech field.</p>
+                        <p>My passion for optimizing today's world with new solutions in the tech industry began with
+                            creating my own crime prediction analysis project. This experience allowed me to expand my
+                            knowledge in machine learning, data analysis, and solving diverse problems in computer
+                            science. I am driven by the potential to create impactful solutions and continuously seek to
+                            learn and grow in the tech field.</p>
                         <a href="#projects" class="projects-link">Explore my projects</a>
                     </div>
                 </div>
@@ -85,20 +164,23 @@
                 <div class="project-card">
                     <img src="zap.jpg" alt="Universal Electric Car Chargers">
                     <h3>Universal Electric Car Chargers</h3>
-                    <p>Designed an electric charging station with a 300 kW output; charges 75-80 kWh battery in 15 minutes.</p>
+                    <p>Designed an electric charging station with a 300 kW output; charges 75-80 kWh battery in 15
+                        minutes.</p>
                     <a href="path/to/project-details1.html">Learn More</a>
                 </div>
                 <div class="project-card">
                     <img src="la1.jpg" alt="Crime Analysis Prediction">
                     <h3>Crime Analysis Prediction</h3>
-                    <p>Processed dataset of over 680,000 crime reports, applied logistic regression & machine learning to
+                    <p>Processed dataset of over 680,000 crime reports, applied logistic regression & machine learning
+                        to
                         predict common crimes.</p>
                     <a href="path/to/project-details2.html">Learn More</a>
                 </div>
                 <div class="project-card">
                     <img src="path/to/project-image3.jpg" alt="Wind Turbine Design">
                     <h3>Wind Turbine Design</h3>
-                    <p>Designed rotor blades & support tower; executed FEA analysis to determine stiffness and durability.</p>
+                    <p>Designed rotor blades & support tower; executed FEA analysis to determine stiffness and
+                        durability.</p>
                     <a href="path/to/project-details3.html">Learn More</a>
                 </div>
                 <div class="project-card">
@@ -110,7 +192,8 @@
                 <div class="project-card">
                     <img src="path/to/project-image5.jpg" alt="Smart Mirror">
                     <h3>Smart Mirror</h3>
-                    <p>Created an interactive mirror with integrated smart home features and personal assistant capabilities.</p>
+                    <p>Created an interactive mirror with integrated smart home features and personal assistant
+                        capabilities.</p>
                     <a href="path/to/project-details5.html">Learn More</a>
                 </div>
                 <div class="project-card">
@@ -125,7 +208,8 @@
         <section id="contact" class="container">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:dbui0321@berkeley.edu">dbui0321@berkeley.edu</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/david-bui-23093a1a3" target="_blank">linkedin.com/in/david-bui-23093a1a3</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/david-bui-23093a1a3"
+                    target="_blank">linkedin.com/in/david-bui-23093a1a3</a></p>
             <p>Phone: (657) 377-7929</p>
         </section>
     </main>
@@ -133,5 +217,13 @@
     <footer class="container">
         <p>&copy; 2024 David Bui</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
+
 </html>
