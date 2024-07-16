@@ -63,7 +63,7 @@ a:hover {
 }
 
 .navbar a:hover {
-    color: #ff6347;
+    color: #BB86FC;
 }
 
 /* Sections */
@@ -99,6 +99,12 @@ h2 {
 .github-logo {
     width: 80px;
     margin-bottom: 1rem;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.github-card:hover .github-logo {
+    transform: scale(1.1);
+    filter: hue-rotate(270deg); /* Changes the logo color to match the purple theme */
 }
 
 .github-content p {
@@ -131,11 +137,17 @@ h2 {
 
 .project-card:hover {
     transform: translateY(-10px);
+    filter: hue-rotate(270deg); /* Changes the card color to match the purple theme */
 }
 
 .project-card img {
     max-width: 100%;
     border-radius: 10px;
+    transition: filter 0.3s;
+}
+
+.project-card:hover img {
+    filter: hue-rotate(270deg); /* Changes the image color to match the purple theme */
 }
 
 .project-card h3 {
@@ -158,7 +170,7 @@ h2 {
 }
 
 .project-card a:hover {
-    background: #ff6347;
+    background: #BB86FC;
 }
 
 /* Experience Section */
@@ -182,6 +194,7 @@ h2 {
 
 .experience-card:hover {
     transform: scale(1.05);
+    filter: hue-rotate(270deg); /* Changes the card color to match the purple theme */
 }
 
 .experience-card img {
@@ -190,6 +203,11 @@ h2 {
     display: block;
     margin: 0 auto;
     object-fit: contain;
+    transition: filter 0.3s;
+}
+
+.experience-card:hover img {
+    filter: hue-rotate(270deg); /* Changes the image color to match the purple theme */
 }
 
 /* Footer */
